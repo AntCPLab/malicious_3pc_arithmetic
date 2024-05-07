@@ -1,0 +1,15 @@
+from Compiler.types import *
+
+a = sint(33674311)
+b = sint(38171592)
+
+total = 10000000
+rounds = 10
+
+for i in range(rounds // 2):
+    for j in range(total // rounds):
+        c = a * b
+    
+    for j in range(total // rounds):
+        a = b * c
+

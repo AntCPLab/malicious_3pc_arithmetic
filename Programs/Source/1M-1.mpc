@@ -1,0 +1,10 @@
+from Compiler.GC.types import *
+import random
+
+total = 1000000
+rounds = 1
+
+for _ in range(total):
+    a = sint(random.randint(0, 0xFFFFFFFFFFFFFFFF))
+    b = sint(random.randint(0, 0xFFFFFFFFFFFFFFFF))
+    c = a * b

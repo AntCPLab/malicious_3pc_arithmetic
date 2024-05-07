@@ -1,0 +1,18 @@
+from Compiler.GC.types import *
+import random
+
+total = 1000000
+rounds = 100
+
+num_per_loop = total // rounds
+
+a = []
+b = []
+
+for _ in range(num_per_loop):
+    a.append(sint(random.randint(0, 0xFFFFFFFFFFFFFFFF)))
+    b.append(sint(random.randint(0, 0xFFFFFFFFFFFFFFFF)))
+
+for _ in range(rounds):
+    for i in range(num_per_loop):
+        a[i] = a[i] * b[i]

@@ -1,0 +1,23 @@
+from Compiler.GC.types import *
+import random
+from Compiler.library import *
+
+total = 10000000
+rounds = 10
+n_threads = 10
+
+num_per_loop = total // rounds
+
+a = sint.Array(num_per_loop)
+b = sint.Array(num_per_loop)
+
+for _ in range(rounds):
+    @for_range_opt_multithread(n_threads, num_per_loop)
+    def _(i):
+        a[i] = sint(random.randint(0, 0xFFFFFFFFFFFFFFFF))
+        b[i] = sint(random.randint(0, 0xFFFFFFFFFFFFFFFF))
+
+for _ in range(rounds):
+    @for_range_opt_multithread(n_threads, num_per_loop)
+    def _(i):
+        a[i] = a[i] * b[i]
