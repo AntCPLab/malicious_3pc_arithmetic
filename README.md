@@ -1,2 +1,2 @@
 # malicious_3pc_arithmetic
-The repo of "Sublinear Distributed Product Checks on Replicated Secret-Shared Data over Z2𝑘 without Ring Extensions""
+The repo of [Sublinear Distributed Product Checks on Replicated Secret-Shared Data over Z2𝑘 without Ring Extensions](https://eprint.iacr.org/2024/700)
